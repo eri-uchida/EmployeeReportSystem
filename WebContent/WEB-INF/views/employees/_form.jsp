@@ -8,6 +8,11 @@
         </c:forEach>
     </div>
 </c:if>
+
+<label for="code">社員番号</label><br />
+<input type="text" name="code" value="${employee.code}" />
+<br /><br />
+
 <laber for="code">氏名</laber><br/>
 <input type="text" name="name" value="${employee.name}"/>
 <br/><br/>
