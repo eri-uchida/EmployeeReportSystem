@@ -1,13 +1,13 @@
-#Staff Blog<br/>
+ #Staff Blog<br/>
 メンバー間で使用（ログイン・ブログ作成・閲覧）出来るWebアプリケーションのコードです。<br/>
 ログイン認証（MySQLへのユーザー照合）、ファイルの作成・更新・削除といった基本的な操作が含まれています。<br/>
 メンバーへのブログへ、いいね、見たよのリアクションが出来る機能もつけています。<br/>
 
-##Demo<br/>
+ ##Demo<br/>
 <br/>
 <br/>
 <br/>
-##Dependency<br/>
+ ##Dependency<br/>
 ・MySQL 5.7.34<br/>
 ・Hibernate 5.2.13.Final<br/>
 ・MySQL JDBC Driver 5.1.45<br/>
@@ -17,7 +17,7 @@
 ・Bootstrap 5.0.0-beta1<br/>
 <br/>
 <br/>
-##Setup<br/>
+ ##Setup<br/>
 1.Eclipseで「動的Webプロジェクト」を作成し、repositoryをcloneします。<br/>
 ($ git clone https://github.com/eri-uchida/Staff-Blog.git)<br/>
 2.プロジェクトをクリーンします。<br/>
@@ -27,13 +27,13 @@
 5.URL・ユーザー・パスワードをお使いのMySQLの情報に変更し、保存します。<br/>
 <br/>
 <br/>
-##Usage<br/>
+ ##Usage<br/>
 1.ブラウザから以下のURLにアクセスすると、ログイン画面が表示されます。<br/>
 (http://localhost:8080/staff-blog/login)<br/>
 2.ユーザ名、パスワードを入力し、ログインします。<br/>
 <br/>
 <br/>
-##License<br/>
+ ##License<br/>
 MIT License<br/>
 <br/>
 Copyright (c) 2021 Eri.Uchida<br/>
@@ -56,10 +56,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br/>
 <br/>
 <br/>
-##Authors<br/>
+ ##Authors<br/>
 Eri.Uchida<br/>
 <br/>
-##Reference<br/>
+ ##Reference<br/>
 [クイックリファレンス WEBカラーリファレンス](http://www.htmq.com/color/colorname.shtml)<br/>
 [Bootstrap設置ガイド](https://bootstrap-guide.com/outline)<br/>
 <br/>

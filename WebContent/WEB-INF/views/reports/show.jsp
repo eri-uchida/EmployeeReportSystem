@@ -103,7 +103,7 @@
                 //ajaxでservletにリクエストを送信
                 $.ajax({
                   type    : "POST",
-                  url     : "/Staff-Blog/reaction",
+                  url     : "/staff-blog/reaction",
                   data    : request,
                   async   : false,
                   dataType: "json"
