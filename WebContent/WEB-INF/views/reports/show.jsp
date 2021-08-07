@@ -28,7 +28,7 @@
                        </tr>
 
                        <tr>
-                         <th>いいね・読んだよ</th>
+                         <th>いいね・見たよ</th>
                                 <td>
                                     <fmt:formatDate value="${reaction.type}" pattern="yyyy-MM-dd" />
                                     <span id="good">
@@ -74,5 +74,51 @@
         </c:choose>
             <p><a href="<c:url value="/reports/index"/>"  style="color:#9370DB"><font size="3">一覧に戻る</font></a></p>
             <br/>
+
+            <script>
+        $(function() {
+            $('#good').on('click', function() {
+                let goodType = "1";
+                let count = reaction(goodType);
+                if (count != null) {
+                    console.log(count);
+                    $('#good-count').text(count);
+                }
+            });
+            $('#mitayo').on('click', function() {
+
+                let mitayoType = "2";
+                let count = reaction(mitayoType);
+                if (count != null) {
+                    console.log(count);
+                    $('#mitayo-count').text(count);
+                }
+            });
+            function reaction(type){
+                let request = {
+                    report_id : $('#id').val(),
+                    type : type
+                };
+                let count = null;
+                //ajaxでservletにリクエストを送信
+                $.ajax({
+                  type    : "POST",
+                  url     : "/Staff-Blog/reaction",
+                  data    : request,
+                  async   : false,
+                  dataType: "json"
+                }).done(function(data, status, xhr) {
+                  //通信が成功した場合に受け取るメッセージ
+                  count = data["count"];
+
+                }).fail(function(xhr, status, error) {
+                  // エラーの場合処理
+                  alert("エラーが発生しました。");
+                });
+                return count;
+            }
+        });
+       </script>
+
     </c:param>
 </c:import>

@@ -1,26 +1,37 @@
 #Staff Blog
 メンバー間で使用（ログイン・ブログ作成・閲覧）出来るWebアプリケーションのコードです。
 ログイン認証（MySQLへのユーザー照合）、ファイルの作成・更新・削除といった基本的な操作が含まれています。
+メンバーへのブログへ、いいね、見たよのリアクションが出来る機能もついています。
 
 ##Demo
 
 
+
 ##Dependency
-<ul>
-<li>MySQL 5.7.34</li>
-<li>Hibernate 5.2.13.Final</li>
-<li>MySQL JDBC Driver 5.1.45</li>
-<li>jstl taglibs-standard-impl 1.2.5</li>
-<li>jstl javax.servlet.jsp.jstl-api 1.2.1</li>
-<li>Bootstrap 5.0.0-beta1</li>
-</ul>
+・MySQL 5.7.34
+・Hibernate 5.2.13.Final
+・MySQL JDBC Driver 5.1.45
+・jstl taglibs-standard-impl 1.2.5
+・jstl javax.servlet.jsp.jstl-api 1.2.1
+・Tomcat（Java8）
+・Bootstrap 5.0.0-beta1
+
 
 ##Setup
+1.Eclipseで「動的Webプロジェクト」を作成し、repositoryをcloneします。
+＞$ git clone https://github.com/eri-uchida/Staff-Blog.git
+2.プロジェクトをクリーンします。
+3.Tomcatの構成済みのリソースに追加します。
+4.以下のファイルの接続タブを表示します。
+＞/staff-blog/src/META-INF/persistence.xml
+5.URL・ユーザー・パスワードをお使いのMySQLの情報に変更し、保存します。
+
 
 ##Usage
-1.以下のURLにアクセスすると、ログイン画面が表示されます。
+1.ブラウザから以下のURLにアクセスすると、ログイン画面が表示されます。
 ＞http://localhost:8080/staff-blog/login
 2.ユーザ名、パスワードを入力し、ログインします。
+
 
 ##License
 MIT License
@@ -48,7 +59,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 ##Authors
 Eri.Uchida
-
 
 ##Reference
 [クイックリファレンス WEBカラーリファレンス](http://www.htmq.com/color/colorname.shtml)
