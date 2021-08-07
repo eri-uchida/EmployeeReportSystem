@@ -4,10 +4,11 @@
 メンバーへのブログへ、いいね、見たよのリアクションが出来る機能もつけています。<br/>
 
 ## Demo<br/>
+[![Image from Gyazo](https://i.gyazo.com/09a31bbd5ad9195d1ecddd78f8a6bff8.gif)](https://gyazo.com/09a31bbd5ad9195d1ecddd78f8a6bff8)
 <br/>
 <br/>
 <br/>
- ##Dependency<br/>
+## Dependency<br/>
 ・MySQL 5.7.34<br/>
 ・Hibernate 5.2.13.Final<br/>
 ・MySQL JDBC Driver 5.1.45<br/>
@@ -19,7 +20,9 @@
 <br/>
 ## Setup<br/>
 1.Eclipseで「動的Webプロジェクト」を作成し、repositoryをcloneします。<br/>
-($ git clone https://github.com/eri-uchida/Staff-Blog.git)<br/>
+```
+$ git clone https://github.com/eri-uchida/Staff-Blog.git)
+```
 2.プロジェクトをクリーンします。<br/>
 3.Tomcatの構成済みのリソースに追加します。<br/>
 4.以下のファイルの接続タブを表示します。<br/>
@@ -29,7 +32,10 @@
 <br/>
 ## Usage<br/>
 1.ブラウザから以下のURLにアクセスすると、ログイン画面が表示されます。<br/>
-(http://localhost:8080/staff-blog/login)<br/>
+```
+http://localhost:8080/staff-blog/login
+```
+<br/>
 2.ユーザ名、パスワードを入力し、ログインします。<br/>
 <br/>
 <br/>
@@ -60,6 +66,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br
 Eri.Uchida<br/>
 <br/>
 ## Reference<br/>
-[クイックリファレンス WEBカラーリファレンス](http://www.htmq.com/color/colorname.shtml)<br/>
-[Bootstrap設置ガイド](https://bootstrap-guide.com/outline)<br/>
+[クイックリファレンス WEBカラーリファレンス](http://www.htmq.com/color/colorname.shtml)
 <br/>
+[Bootstrap設置ガイド](https://bootstrap-guide.com/outline)
+<br/><br/>
