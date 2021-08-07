@@ -4,13 +4,13 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${employee!=null}">
-                <h2>id ： ${employee.id}の従業員情報 編集ページ</h2>
-                <p>（パスワードは変更する場合のみ入力してください）</p>
+                <br/><font size="5">社員番号： ${employee.code}のスタッフ情報 編集ページ</font></br></br>
                 <form method="POST"action="<c:url value='/employees/update'/>">
-                    <c:import url="_form.jsp"/>
+                    <c:import url="_form2.jsp"/>
                 </form>
 
-            <p><a href ="#" onclick="confirmDestroy();">この従業員情報を削除する</a></p>
+
+            <p><button type ="submit" a href ="#" onclick="confirmDestroy();" class="btn btn-danger">このスタッフ情報を削除する</button></a></p>
             <form method="POST" action="<c:url value='/employees/destroy'/>">
                 <input type="hidden" name="_tokne" value="${_token}"/>
             </form>
@@ -27,6 +27,6 @@
             </c:otherwise>
         </c:choose>
 
-        <p><a href="<c:url value='/employees/index'/>">一覧に戻る</a></p>
+        <p><a href="<c:url value='/employees/index'/>" style="color:#9370DB"><font size="3">一覧に戻る</font></a></p>
     </c:param>
 </c:import>

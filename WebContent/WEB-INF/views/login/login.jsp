@@ -12,18 +12,28 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>ログイン</h2>
+
+
+        <div class="form-wrapper">
+        <h1>Sign In</h1>
         <form method="POST" action="<c:url value='login'/>">
-            <label for="code"></label>社員番号<br/>
-            <input type="text" name="code" value="${code}"/>
-            <br/><br/>
 
-            <label for="password"></label>パスワード<br/>
-            <input type="password" name="password">
-            <br/><br/>
+        <div class="form-item">
+            <label for="code"></label>
+            <input type="text" name="code" required="required" placeholder="社員番号" value="${code}"/>
+        </div>
+            <br/>
+        <div class="form-item">
+            <label for="password"></label>
+            <input type="password" name="password" required="required" placeholder="Password">
+            <br/>
+        </div>
 
+        <div class="button-panel">
             <input type ="hidden" name="_token" value="${_token}/">
-            <button type="submit">ログイン</button>
+            <button type="submit"  class="button" title="Sign In" value="Sign In">Sign In</button>
+        </div>
         </form>
+        </div>
     </c:param>
 </c:import>

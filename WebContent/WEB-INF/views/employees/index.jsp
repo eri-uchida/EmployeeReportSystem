@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <c:import url="../layout/app.jsp">
     <c:param name="content">
         <c:if test="${flush != null}">
@@ -7,14 +8,19 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>従業員 一覧</h2>
-        <table id="employee_list">
-            <tbody>
-                <tr>
-                    <th>社員番号</th>
-                    <th>氏名</th>
-                    <th>操作</th>
-                </tr>
+        <br/>
+        <font size="5">登録スタッフ一覧</font>
+        <table class="table table-warning table-hover">
+
+                <thead>
+                   <tr>
+                     <th>社員番号</th>
+                     <th>氏名</th>
+                     <th>操作</th>
+                   </tr>
+                </thead>
+
+                <tbody>
                 <c:forEach var="employee" items="${employees}" varStatus="status">
                    <tr class="row${status.count % 2}">
                          <td><c:out value="${employee.code}" /></td>
@@ -22,10 +28,10 @@
                          <td>
                             <c:choose>
                                 <c:when test="${employee.delete_flag==1}">
-                                （削除済み）
+                                  （削除済み）
                                 </c:when>
                                 <c:otherwise>
-                                     <a href="<c:url value='/employees/show?id=${employee.id}' />">詳細を表示</a>
+                                     <a href="<c:url value='/employees/show?id=${employee.id}' />"  class="text-danger">詳細を表示</a>
                                 </c:otherwise>
                             </c:choose>
                          </td>
@@ -46,7 +52,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/employees/new' />">新規従業員の登録</a></p>
+        <p><a href="<c:url value='/employees/new' />"  style="color:#9370DB"><font size="3">新規スタッフ登録</font></a></p><br/>
 
     </c:param>
 </c:import>

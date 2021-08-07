@@ -4,7 +4,8 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${report != null}">
-                <h2>日報 編集ページ</h2>
+                <br/>
+                <font size="4">ブログ編集ページ</font><br/><br/>
                 <form method="POST" action="<c:url value='/reports/update'/>">
                     <c:import url="_form.jsp"/>
                 </form>
@@ -14,6 +15,6 @@
             </c:otherwise>
         </c:choose>
 
-        <p><a href="<c:url value='/reports/index'/>">一覧に戻る</a></p>
+        <p><a href="<c:url value='/reports/index'/>"  style="color:#9370DB"><font size="3">一覧に戻る</font></a></p>
     </c:param>
 </c:import>

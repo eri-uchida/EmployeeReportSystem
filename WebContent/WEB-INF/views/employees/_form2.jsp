@@ -20,7 +20,7 @@
 
 <label for="password"  class="col-sm-2 col-form-label">パスワード</label><br/>
 <div class="col-sm-10">
-<input type="password" class="form-control" name="password" id="password" placeholder="パスワードを入力してください"/>
+<input type="password" class="form-control" name="password" id="password" placeholder="パスワードは変更する場合のみ入力してください"/>
 <br/>
 </div>
 
@@ -34,4 +34,4 @@
 </div>
 
 <input type="hidden" name="_token" value="${_token}"/>
-<button type ="submit"  class="btn btn-danger">登録</button>
+<button type ="submit"  class="btn btn-secondary">登録</button>

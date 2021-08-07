@@ -19,6 +19,9 @@ import utils.DBUtil;
 @WebServlet("/reports/show")
 public class ReportsShowServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    private static final int GOOD_TYPE = 1;
+    private static final int MITAYO_TYPE = 2;
+
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,14 +35,31 @@ public class ReportsShowServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         EntityManager em = DBUtil.createEntityManager();
 
         Report r = em.find(Report.class,Integer.parseInt(request.getParameter("id")));
+
+     // ブログのいいね（ハート）リアクション件数を取得
+        long goodCount = (Long)em.createNamedQuery("getReactionCountByType", Long.class)
+                .setParameter("report_id", r.getId())
+                .setParameter("type", GOOD_TYPE)
+                .getSingleResult();
+
+        //ブログの読んだよ（吹き出し）リアクション件数を取得
+        long mitayoCount = (Long)em.createNamedQuery("getReactionCountByType", Long.class)
+                .setParameter("report_id", r.getId())
+                .setParameter("type", MITAYO_TYPE)
+                .getSingleResult();
+
 
         em.close();
 
         request.setAttribute("report",r);
         request.setAttribute("_token",request.getSession().getId());
+        request.setAttribute("goodCount", goodCount);
+        request.setAttribute("mitayoCount", mitayoCount);
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/show.jsp");
         rd.forward(request, response);

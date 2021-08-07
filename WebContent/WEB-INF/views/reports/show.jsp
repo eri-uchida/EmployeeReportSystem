@@ -5,51 +5,74 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${report != null}">
-                <h2>日報 詳細ページ</h2>
+                <br/>
+                <font size="5">${report.title}</font><br/><br/>
 
-                <table>
+                <table class="table table-primary">
                     <tbody>
                        <tr>
-                         <th>氏名</th>
-                         <td><c:out value="${report.employee.name}"/></td>
+                         <th scope="col">氏名</th>
+                            <td><c:out value="${report.employee.name}"/></td>
                        </tr>
 
                        <tr>
-                         <th>日付</th>
-                         <td><fmt:formatDate value="${report.report_date}" pattern="yy-MM-dd"/></td>
+                         <th scope="col">日付</th>
+                            <td><fmt:formatDate value="${report.report_date}" pattern="yyyy年MM月dd日"/></td>
                        </tr>
 
                        <tr>
-                         <th>内容</th>
-                         <td>
-                            <pre></pre><c:out value="${report.content}"/></pre>
-                         </td>
-                       </tr>
-
-                       <tr>
-                         <th>登録日時</th>
-                         <td>
-                            <fmt:formatDate value="${report.created_at}" pattern="yy-MM-dd HH:mm:ss"/>
+                         <th scope="col">本文</th>
+                            <td>
+                               <pre></pre><c:out value="${report.content}"/></pre>
                             </td>
                        </tr>
 
                        <tr>
-                         <th>更新日時</th>
-                         <td>
-                            <fmt:formatDate value="${report.updated_at}" pattern="yy-MM-dd HH:mm:ss"/>
-                         </td>
+                         <th>いいね・読んだよ</th>
+                                <td>
+                                    <fmt:formatDate value="${reaction.type}" pattern="yyyy-MM-dd" />
+                                    <span id="good">
+                                        <img src="<c:url value='https://i.gyazo.com/714415dfd02cae3b3f78e147ee2b9e98.png'/>" width="35px"
+                                            height="35px">
+                                        <span id="good-count">
+                                            <c:out value="${goodCount}" />
+                                        </span>
+                                    </span>
+                                    <span id="mitayo">
+                                        <img src="<c:url value='https://i.gyazo.com/7574c701e1d83a7a7ba77737284388fd.png'/>" width="35px"
+                                            height="35px">
+                                        <span id="mitayo-count">
+                                            <c:out value="${mitayoCount}" />
+                                        </span>
+                                    </span>
+                                </td>
+                         </tr>
+
+                       <tr>
+                         <th scope="col">登録日時</th>
+                            <td>
+                              <fmt:formatDate value="${report.created_at}" pattern="yyyy年MM月dd日 HH:mm:ss"/>
+                            </td>
+                       </tr>
+
+                       <tr>
+                         <th scope="col">更新日時</th>
+                            <td>
+                              <fmt:formatDate value="${report.updated_at}" pattern="yyyy年MM月dd日 HH:mm:ss"/>
+                            </td>
                        </tr>
                     </tbody>
                 </table>
-
+                <input type="hidden" id="id" value="${report.id}" />
                 <c:if test="${sessionScope.login_employee.id == report.employee.id}">
-                    <p><a href="<c:url value="/reports/edit?id=${report.id}"/>">この日報を編集する</a></p>
+                    <p><a href="<c:url value="/reports/edit?id=${report.id}"/>" style="color:#9370DB"><font size="3">この記事を編集する</font></a></p>
                 </c:if>
             </c:when>
             <c:otherwise>
-                <h2>お探しのデータは見つかりませんでした。</h2>
+                <h2>Not found</h2>
             </c:otherwise>
         </c:choose>
-            <p><a href="<c:url value="/reports/index"/>">一覧に戻る</a></p>
+            <p><a href="<c:url value="/reports/index"/>"  style="color:#9370DB"><font size="3">一覧に戻る</font></a></p>
+            <br/>
     </c:param>
 </c:import>
