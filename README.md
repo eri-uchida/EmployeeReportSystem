@@ -19,17 +19,17 @@
 
 ##Setup
 1.Eclipseで「動的Webプロジェクト」を作成し、repositoryをcloneします。
-＞$ git clone https://github.com/eri-uchida/Staff-Blog.git
+($ git clone https://github.com/eri-uchida/Staff-Blog.git)
 2.プロジェクトをクリーンします。
 3.Tomcatの構成済みのリソースに追加します。
 4.以下のファイルの接続タブを表示します。
-＞/staff-blog/src/META-INF/persistence.xml
+(/staff-blog/src/META-INF/persistence.xml)
 5.URL・ユーザー・パスワードをお使いのMySQLの情報に変更し、保存します。
 
 
 ##Usage
 1.ブラウザから以下のURLにアクセスすると、ログイン画面が表示されます。
-＞http://localhost:8080/staff-blog/login
+(http://localhost:8080/staff-blog/login)
 2.ユーザ名、パスワードを入力し、ログインします。
 
 
@@ -63,3 +63,4 @@ Eri.Uchida
 ##Reference
 [クイックリファレンス WEBカラーリファレンス](http://www.htmq.com/color/colorname.shtml)
 [Bootstrap設置ガイド](https://bootstrap-guide.com/outline)
+
