@@ -18,7 +18,6 @@
 - Apache Tomcat 8.0.43<br/>
 - Bootstrap 5.0.0-beta1<br/>
 <br/>
-<br/>
 
 ## Setup<br/>
 1.Eclipseで「動的Webプロジェクト」を作成し、repositoryをcloneします。<br/>
