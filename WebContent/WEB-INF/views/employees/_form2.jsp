@@ -24,7 +24,7 @@
 <br/>
 </div>
 
-権限<br/>
+<font color="#5e5e5e">権限</font><br/>
 <select class="admin_flag" select name="admin_flag" aria-label="権限">
   <option selected>選択してください</option>
   <option value="0" <c:if test="${employee.admin_flag == 0}"> selected</c:if>>一般</option>

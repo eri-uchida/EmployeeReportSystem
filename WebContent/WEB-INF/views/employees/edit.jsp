@@ -23,7 +23,7 @@
             </script>
             </c:when>
             <c:otherwise>
-                <h2>お探しのデータは見つかりませんでした。</h2>
+                <h2>Not found</h2>
             </c:otherwise>
         </c:choose>
 

@@ -26,7 +26,7 @@
         <div id="wapper">
             <div id="header">
                 <div id="header_menu">
-                    <h1><a href="<c:url value='/'/>" style="color:#FF1493;"><font size="7">Staff Blog</font></a></h1>&nbsp;&nbsp;&nbsp;
+                    <a href="<c:url value='/'/>" style="color:#FF1493;"><font size="7">Staff Blog</font></a>&nbsp;&nbsp;&nbsp;
                 <c:if test="${sessionScope.login_employee != null}">
                     <c:if test="${sessionScope.login_employee.admin_flag == 1}">
                     <a href="<c:url value='/employees/index'/>"  style="color:#8B008B"><font size="4">スタッフ管理</font></a>&nbsp;

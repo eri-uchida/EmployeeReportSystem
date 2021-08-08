@@ -8,7 +8,8 @@
             <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h3>【自分の作成したブログ一覧】</h3>
+        <br/>
+        <font size="4">【自分の作成したブログ一覧】</font>
 
         <table class="table table-sm table-info table-hover table-striped">
             <tbody>

@@ -15,8 +15,10 @@
 <input type="date" class="form-control" name="report_date"  placeholder="日付を入力してください" value="<fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd'/>"/>
 <br/><br/>
 
+<div id="reort_newform_name">
 <label for="name">氏名</label><br/>
 <c:out value="${sessionScope.login_employee.name}"/>
+</div>
 <br/><br/>
 
 <label for="title" class="form-label">タイトル</label><br/>

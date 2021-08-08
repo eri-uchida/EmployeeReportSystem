@@ -3,7 +3,7 @@
 
 
 body {
-    font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+    color: #5e5e5e;
     background-image:url("https://i.gyazo.com/31b59fd6388e008e7f51f5be2f1535d4.jpg");
     background-size: cover;
 }
@@ -20,11 +20,6 @@ body {
     margin-top: 15px;
     padding-left: 3%;
     max-width: 800px;
-}
-
-h1 {
-    font-size: 24px;
-    display: inline;
 }
 
 h2 {
@@ -44,9 +39,15 @@ p {
 
 a {
     text-decoration: none;
-    color: #24738e;
 }
 
+#reort_newform_name{
+    color: #5e5e5e;
+}
+
+label{
+    color: #5e5e5e;
+}
 
 table {
     width: 100%;
@@ -92,22 +93,13 @@ button {
     background-color: #f8d7da;
 }
 
-table#employee_list th{
-    width:30%;
-    padding:10px 2%;
-}
-
-table#employee_list td{
-    width:29%;
-    padding:10px 2%;
-}
-
 select{
     height:30px;
 }
 
 #header_menu {
     width: 57%;
+    margin-top: 4%;
     padding-top: 17px;
     padding-left: 3%;
     display: inline-block;
@@ -122,39 +114,13 @@ select{
     display: inline-block;
 }
 
-
-table#report_list th{
-    font-weifht:bold;
-    padding:10px 2%;
-}
-
-table#report_list .report_name{
-    width: 15%;
-    padding: 10px ;
-}
-
-table#report_list .report_date{
-     width: 15%;
-}
-
-table#report_list .report_title{
-     width: 40%;
-}
-
-table#report_list .report_action{
-     width: 13%;
-}
-
 pre{
     font-family:"Hiragino Kaku Gothic Pro",Meiryo,"MS Gothic",Helvetica,Arial,sans-serif;
 }
 
-h3{
-    font-size:larger;
-}
 
 
-
+/*ログイン*/
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
 
@@ -182,9 +148,11 @@ body {
 }
 
 h1 {
+  font-size:25px;
   text-align: center;
   padding: 1em 0;
   margin-top: 3em;
+  color: #5e5e5e;
 }
 
 form {
@@ -237,20 +205,4 @@ form {
 
 .button:hover {
   background: #ee3e52;
-}
-
-.form-footer {
-  font-size: 1em;
-  padding: 2em 0;
-  text-align: center;
-}
-
-.form-footer a {
-  color: #8c8c8c;
-  text-decoration: none;
-  transition: border-color 0.3s;
-}
-
-.form-footer a:hover {
-  border-bottom: 1px dotted #8c8c8c;
 }
